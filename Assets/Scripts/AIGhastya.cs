@@ -14,7 +14,18 @@ public class AIGhastya : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            transform.eulerAngles = Vector3.forward * -1;
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            transform.eulerAngles = Vector3.forward * 0;
+        }
+     
         if (Vector2.Distance(transform.position, target.position) > 2)
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        } 
     }
 }

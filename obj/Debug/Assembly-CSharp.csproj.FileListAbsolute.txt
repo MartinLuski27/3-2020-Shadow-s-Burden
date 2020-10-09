@@ -334,3 +334,5 @@ C:\Users\HP\Documents\GitHub\3-2020-Shadow-s-Burden\Temp\bin\Debug\UnityEngine.G
 C:\Users\HP\Documents\GitHub\3-2020-Shadow-s-Burden\Temp\bin\Debug\UnityEngine.HoloLens.xml
 C:\Users\HP\Documents\GitHub\3-2020-Shadow-s-Burden\Temp\bin\Debug\UnityEngine.SpatialTracking.xml
 C:\Users\HP\Documents\GitHub\3-2020-Shadow-s-Burden\obj\Debug\Assembly-CSharp.csproj.CopyComplete
+C:\Users\HP\Documents\GitHub\3-2020-Shadow-s-Burden\Temp\bin\Debug\Cinemachine.dll
+C:\Users\HP\Documents\GitHub\3-2020-Shadow-s-Burden\Temp\bin\Debug\com.unity.cinemachine.editor.dll
