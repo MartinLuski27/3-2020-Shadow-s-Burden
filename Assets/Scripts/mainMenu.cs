@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class MainMenu : MonoBehaviour {
+public class mainMenu : MonoBehaviour {
 
     public AudioMixer audioMixer;
 
