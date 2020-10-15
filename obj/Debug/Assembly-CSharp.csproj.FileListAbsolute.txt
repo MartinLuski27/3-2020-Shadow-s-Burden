@@ -336,3 +336,9 @@ C:\Users\HP\Documents\GitHub\3-2020-Shadow-s-Burden\Temp\bin\Debug\UnityEngine.S
 C:\Users\HP\Documents\GitHub\3-2020-Shadow-s-Burden\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\HP\Documents\GitHub\3-2020-Shadow-s-Burden\Temp\bin\Debug\Cinemachine.dll
 C:\Users\HP\Documents\GitHub\3-2020-Shadow-s-Burden\Temp\bin\Debug\com.unity.cinemachine.editor.dll
+C:\Users\HP\Documents\GitHub\3-2020-Shadow-s-Burden\Temp\bin\Debug\Pathfinding.Ionic.Zip.Reduced.dll
+C:\Users\HP\Documents\GitHub\3-2020-Shadow-s-Burden\Temp\bin\Debug\UnityEditor.UI.dll
+C:\Users\HP\Documents\GitHub\3-2020-Shadow-s-Burden\Temp\bin\Debug\AstarPathfindingProject.pdb
+C:\Users\HP\Documents\GitHub\3-2020-Shadow-s-Burden\Temp\bin\Debug\PackageToolsEditor.pdb
+C:\Users\HP\Documents\GitHub\3-2020-Shadow-s-Burden\Temp\bin\Debug\AstarPathfindingProjectEditor.pdb
+C:\Users\HP\Documents\GitHub\3-2020-Shadow-s-Burden\Temp\bin\Debug\UnityEditor.UI.xml
