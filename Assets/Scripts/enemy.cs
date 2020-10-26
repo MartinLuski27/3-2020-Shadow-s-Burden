@@ -1,22 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class enemy : MonoBehaviour {
 
-    public int maxHealth = 2;
+    public int maxHealth = 15;
     int currentHealth;
-    public Animator animacionDaño;
-    public Animator animacionMuerte;
+    public Animator animator;
+    
 
     void Start()
     {
         currentHealth = maxHealth;
+        
 	}
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        
 
         if (currentHealth <= 0)
         {
@@ -24,12 +27,14 @@ public class enemy : MonoBehaviour {
         }
         else
         {
-            animacionDaño.SetTrigger("Daño");
+            animator.SetTrigger("Hurt");
         }
     }
     
     void Die()
     {
-        
+        animator.SetBool("Muerto", true);
+		GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
     }
 }

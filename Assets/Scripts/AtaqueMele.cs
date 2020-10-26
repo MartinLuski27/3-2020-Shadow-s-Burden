@@ -4,23 +4,31 @@ using UnityEngine;
 
 public class AtaqueMele : MonoBehaviour {
 
-    public Animator animacion;
+    public Animator animator;
     public Transform PuntoAtaque;
     public LayerMask enemyLayer;
 
     public float Rango = 0.5f;
     public int Daño = 1;
 
+    public float AttackRate = 1f;
+    float NextAttackTime = 0f;
+
 	void Update ()
     {
-		if (Input.GetKeyDown(KeyCode.Z))
+        if(Time.time >+ NextAttackTime)
         {
-            Ataque();
+                if (Input.GetKeyDown(KeyCode.Z))
+            {
+                Ataque();
+                NextAttackTime = Time.time + 1f / AttackRate;
+            }
         }
+		
 	}
     void Ataque()
     {
-        animacion.SetTrigger("Ataque");
+        animator.SetTrigger("Ataque");
         Collider2D[] golpearEnemigo = Physics2D.OverlapCircleAll(PuntoAtaque.position, Rango, enemyLayer);
 
         foreach(Collider2D enemy in golpearEnemigo)
