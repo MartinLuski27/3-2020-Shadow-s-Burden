@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -52,4 +53,7 @@ TagManager:
     locked: 0
   - name: enemy
     uniqueID: 793070059
+    locked: 0
+  - name: Jefe
+    uniqueID: 2319624229
     locked: 0
