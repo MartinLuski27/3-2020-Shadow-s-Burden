@@ -122,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 22424496}
   - component: {fileID: 22424497}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: lineaSemisolida3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 364408427}
   - component: {fileID: 364408429}
   - component: {fileID: 364408430}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: semisolid1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -829,7 +829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 470869471}
   - component: {fileID: 470869470}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Layout-piramide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1265,7 +1265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 594449810}
   - component: {fileID: 594449811}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: lineaSemisolida2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1616,7 +1616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 756169524}
   - component: {fileID: 756169525}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: lineaSemisolida1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2350,7 +2350,7 @@ GameObject:
   - component: {fileID: 1049875916}
   - component: {fileID: 1049875915}
   - component: {fileID: 1049875914}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3058,11 +3058,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4513644938780778, guid: ef5fbabc6df97454c8e85ec86c056997, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -69.8
+      value: 72.26
       objectReference: {fileID: 0}
     - target: {fileID: 4513644938780778, guid: ef5fbabc6df97454c8e85ec86c056997, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.68
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4513644938780778, guid: ef5fbabc6df97454c8e85ec86c056997, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3683,6 +3683,7 @@ GameObject:
   - component: {fileID: 1408264418}
   - component: {fileID: 1408264425}
   - component: {fileID: 1408264427}
+  - component: {fileID: 1408264428}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3702,13 +3703,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d164a6ac5399cb44184962a166c4d15a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animacion: {fileID: 0}
+  animator: {fileID: 0}
   PuntoAtaque: {fileID: 778658313}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 256
   Rango: 0.7
   "Da\xF1o": 1
+  AttackRate: 1
 --- !u!114 &1408264419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3722,7 +3724,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1408264423}
-  runSpeed: 75
+  animator: {fileID: 1408264428}
+  runSpeed: 50
 --- !u!58 &1408264420
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3804,7 +3807,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2048
   m_GroundCheck: {fileID: 393894049}
   m_CeilingCheck: {fileID: 428677784}
   m_CrouchDisableCollider: {fileID: 0}
@@ -3885,7 +3888,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1408264417}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d30e2a74aff26764aadc3e323bff5996, type: 3}
   m_Name: 
@@ -3912,6 +3915,26 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 0
   healthBar: {fileID: 523351361}
+  animator: {fileID: 0}
+  rb: {fileID: 0}
+--- !u!95 &1408264428
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1408264417}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ed5d527836d43a7438c425d33c9d0192, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1423201209
 GameObject:
   m_ObjectHideFlags: 0
@@ -4153,7 +4176,7 @@ GameObject:
   - component: {fileID: 1566819246}
   - component: {fileID: 1566819248}
   - component: {fileID: 1566819247}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: semisolid3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5239,7 +5262,7 @@ GameObject:
   - component: {fileID: 2075450646}
   - component: {fileID: 2075450648}
   - component: {fileID: 2075450647}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: semisolid2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
