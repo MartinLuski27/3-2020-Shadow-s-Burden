@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class enemyCollide : MonoBehaviour {
 
+    public GameObject momia;
+
 	void OnTriggerEnter2D(Collider2D info)
     {
-        if (info.GetComponent<Collider>().tag == "bordePatrol")
+        if (info.gameObject.tag == "bordePatrol")
         {
-            Debug.Log("trigger mostri");
+            momia.GetComponent<patrolAI>().flip();
         }
     }
 	

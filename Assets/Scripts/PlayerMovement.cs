@@ -5,17 +5,18 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     public CharacterController2D controller;
-
     public Animator animator;
-
     public float runSpeed = 40;
-
+    
     float horizontalMove = 0;
-
     bool jump = false;
-	
-	// Update is called once per frame
-	void Update () {
+
+    public GameObject semisolida1;
+    public GameObject semisolida2;
+    public GameObject semisolida3;
+
+    // Update is called once per frame
+    void Update () {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
         animator.SetFloat("Velocidad", Mathf.Abs(horizontalMove));
@@ -25,9 +26,22 @@ public class PlayerMovement : MonoBehaviour {
             jump = true;
             animator.SetBool("Salto", true);
         }
-	}
 
-    public void OnLanding()
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            semisolida1.SetActive(false);
+            semisolida2.SetActive(false);
+            semisolida3.SetActive(false);
+        }
+
+    }
+
+    public void OnCollisionEnter2D(Collision2D info)
+    {
+        if (info.gameObject.layer == 11)
+            animator.SetBool("Salto", false);
+    }
+    void OnLanding()
     {
         animator.SetBool("Salto", false);
     }

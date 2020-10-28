@@ -6,34 +6,40 @@ public class patrolAI : MonoBehaviour
 {
 
     public float speed;
+    private bool isFlipped = false;
+    public Transform transformMomia;
 
-    private bool movingLeft = true;
-
-    public Transform groundDetection;
-        
+    float scaleX;
+    float scaleY;
+    float scaleZ;
 
     // Update is called once per frame
     void Update()
     {
-        //Mueve al enemigo hacia la derecha en el eje Y
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
-
-        //Linea invisible aparentada al jugador, que apunta hacia abajo para detectar la plataforma, e informa cuando no lo hace para que el jugador cambie su dirección
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 2f, 12);
-        if (groundInfo.collider == false)
+        if (isFlipped == false)
+            //Mueve al enemigo hacia la izquierda en el eje X
+            transform.Translate(Vector2.left * speed * Time.deltaTime);
+        else if (isFlipped == true)
+            //Mueve al enemigo hacia la derecha en el eje X
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
+    }
+    public void flip()
+    {
+        if (isFlipped == false)
         {
-            if (movingLeft == true)
-            {
-                //Rota el sprite del jugador horizontalmente y deja de avanzar hacia la derecha, por lo que avanza hacia la izquierda
-                transform.eulerAngles = new Vector3(0, 0, 0);
-                movingLeft = false;
-            }
-            else
-            {
-                //Opuesto a lo de arriba
-                transform.eulerAngles = new Vector3(0, -180, 0);
-                movingLeft = true;
-            }
+            scaleX = transformMomia.localScale.x;
+            scaleY = transformMomia.localScale.y;
+            scaleZ = transformMomia.localScale.z;
+            transformMomia.localScale = new Vector3(scaleX * -1, scaleY, scaleZ);
+            isFlipped = true;
+        }
+        else if (isFlipped == true)
+        {
+            scaleX = transformMomia.localScale.x;
+            scaleY = transformMomia.localScale.y;
+            scaleZ = transformMomia.localScale.z;
+            transformMomia.localScale = new Vector3(scaleX * -1, scaleY, scaleZ);
+            isFlipped = false;
         }
     }
 }

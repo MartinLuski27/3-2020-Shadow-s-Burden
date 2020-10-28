@@ -497,7 +497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 470869471}
   - component: {fileID: 470869470}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Layout-boss-arena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1499,7 +1499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1049875910}
   - component: {fileID: 1049875911}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2577,6 +2577,9 @@ MonoBehaviour:
   controller: {fileID: 1408264423}
   animator: {fileID: 1408264428}
   runSpeed: 75
+  semisolida1: {fileID: 0}
+  semisolida2: {fileID: 0}
+  semisolida3: {fileID: 0}
 --- !u!58 &1408264420
 CircleCollider2D:
   m_ObjectHideFlags: 0
