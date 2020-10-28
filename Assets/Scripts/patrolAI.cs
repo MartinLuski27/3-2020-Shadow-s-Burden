@@ -7,21 +7,19 @@ public class patrolAI : MonoBehaviour
 
     public float speed;
 
-    public float distance;
-
     private bool movingLeft = true;
 
     public Transform groundDetection;
-
+        
 
     // Update is called once per frame
     void Update()
     {
-        //Mueve al enemigo ahcia la derecha en el eje Y
+        //Mueve al enemigo hacia la derecha en el eje Y
         transform.Translate(Vector2.left * speed * Time.deltaTime);
 
         //Linea invisible aparentada al jugador, que apunta hacia abajo para detectar la plataforma, e informa cuando no lo hace para que el jugador cambie su dirección
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
+        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 2f, 12);
         if (groundInfo.collider == false)
         {
             if (movingLeft == true)
