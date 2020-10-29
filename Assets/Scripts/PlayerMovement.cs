@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour {
 
         animator.SetFloat("Velocidad", Mathf.Abs(horizontalMove));
 
+        //detectar input para saltar y realizar el salto con su animación
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
@@ -46,7 +47,7 @@ public class PlayerMovement : MonoBehaviour {
         animator.SetBool("Salto", false);
     }
     
-
+    //Movimiento del jugador que se actualiza cada frame, teniendo habilitado el salto pero no agacharse
     void FixedUpdate ()
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);

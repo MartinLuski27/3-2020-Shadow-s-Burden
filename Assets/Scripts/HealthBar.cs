@@ -15,6 +15,8 @@ public class HealthBar : MonoBehaviour {
         slider.value = health;
     }
 
+
+    //Función para relacionar el valor de la salud del jugador con la barra.
     public void SetHealth(int health)
     {
         slider.value = health;

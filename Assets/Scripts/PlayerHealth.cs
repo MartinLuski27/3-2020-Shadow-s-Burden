@@ -7,11 +7,16 @@ public class PlayerHealth : MonoBehaviour {
     public int maxHealth = 5;
     public int currentHealth;
 
+    public AudioSource hurtSound;
+
+    public int moralidad = 0;
+
     public HealthBar healthBar;
 
     public Animator animator;
     
     // Use this for initialization
+    //El jugador comienza con la máxima salud y se muestra en la barra de vida
 	void Start () {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -26,11 +31,13 @@ public class PlayerHealth : MonoBehaviour {
         }
 	}
 
+    //El jugador recibe daño y se disminuye en la cantidad de daño recibido su vida
     public void takeDamage(int damage)
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
         animator.SetTrigger("Hurt");
+        hurtSound.Play();
 
         if(currentHealth <= 0f)
         {
