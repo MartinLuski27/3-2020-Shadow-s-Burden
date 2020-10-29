@@ -9,8 +9,11 @@ public class PauseMenu : MonoBehaviour {
     public static bool GameIsPaused = false;
     
     public GameObject menuPausaUI;
+
+    public AudioSource UIsound2;
 	
 	// Update is called once per frame
+    //Función que detecta si el juego está pausado, entonces al apretar "escape", dependiendo de si lo está o no, pausa o continua el juego.
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -25,11 +28,13 @@ public class PauseMenu : MonoBehaviour {
         }
 	}
 
+    //Función que hace que el juego continue y vuelva a estado de juego. Se puede acceder con "escape" o su mismo botón.
     public void Continuar ()
     {
         menuPausaUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        UIsound2.Play();
     }
 
     public void Pausar ()
@@ -37,11 +42,13 @@ public class PauseMenu : MonoBehaviour {
         menuPausaUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        UIsound2.Play();
     }
     
+    //Función que sale al menú principal (no guarda porque el juego es corto y no es necesario).
     public void GuardarySalir ()
     {
-        //Falta la parte de guardado, por ahora solo tenemos la de salir al menú principal
         SceneManager.LoadScene(0);
+        UIsound2.Play();
     }
 }

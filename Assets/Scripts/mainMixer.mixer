@@ -20,6 +20,7 @@ AudioMixerController:
   m_AudioMixerGroupViews:
   - guids:
     - 801c675e30799624186d66eaff44f30f
+    - 7bf14a924eedc4f4e8469df3326bacf6
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -31,7 +32,8 @@ AudioMixerGroupController:
   m_Name: Master
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 801c675e30799624186d66eaff44f30f
-  m_Children: []
+  m_Children:
+  - {fileID: 243753261126610084}
   m_Volume: 9bd833818b827f240a00750bcaaae8e5
   m_Pitch: f00d7c18093e81149ae5ac0ba1cbbb24
   m_Effects:
@@ -62,5 +64,36 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 1e7902acd68ba4b4cb46b37096cb4e0e
   m_FloatValues:
-    9bd833818b827f240a00750bcaaae8e5: -80
+    9bd833818b827f240a00750bcaaae8e5: 0
+    00c5d3056ad984541b49b72ff4df34f6: 0.04171297
   m_TransitionOverrides: {}
+--- !u!243 &243753261126610084
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: musicaFondog
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 7bf14a924eedc4f4e8469df3326bacf6
+  m_Children: []
+  m_Volume: 00c5d3056ad984541b49b72ff4df34f6
+  m_Pitch: 3e567c83a37357545ad52aa63d497f2d
+  m_Effects:
+  - {fileID: 244832890279767010}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &244832890279767010
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 66d3c15a9d1f18f40b4487167111c44f
+  m_EffectName: Attenuation
+  m_MixLevel: de5c79473ddec274bbf389c2546aaa27
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0

@@ -8,6 +8,8 @@ public class AtaqueMele : MonoBehaviour {
     public Transform PuntoAtaque;
     public LayerMask enemyLayer;
 
+    public AudioSource hitSound;
+
     public float Rango = 0.5f;
     public int Daño = 1;
 
@@ -30,6 +32,7 @@ public class AtaqueMele : MonoBehaviour {
     {
         animator.SetTrigger("Ataque");
         Collider2D[] golpearEnemigo = Physics2D.OverlapCircleAll(PuntoAtaque.position, Rango, enemyLayer);
+        hitSound.Play();
 
         foreach(Collider2D enemy in golpearEnemigo)
         {
