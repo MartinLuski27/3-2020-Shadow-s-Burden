@@ -1315,7 +1315,6 @@ GameObject:
   - component: {fileID: 626038229}
   - component: {fileID: 626038227}
   - component: {fileID: 626038228}
-  - component: {fileID: 626038230}
   m_Layer: 0
   m_Name: momia
   m_TagString: bordePatrol
@@ -1439,7 +1438,7 @@ Rigidbody2D:
   m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1458,31 +1457,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   transformMomia: {fileID: 626038226}
---- !u!61 &626038230
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 626038223}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.017087713, y: -0.23278129}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.26, y: 0.48}
-    newSize: {x: 0.26, y: 0.48}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.167635, y: 0.014537334}
-  m_EdgeRadius: 0
 --- !u!1 &633125905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,7 +1832,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 778658312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0588, y: -0.0232, z: 0}
+  m_LocalPosition: {x: 0.0588, y: 0.012, z: 0}
   m_LocalScale: {x: 1.8533516, y: 1.924935, z: 1.924935}
   m_Children: []
   m_Father: {fileID: 1221649255}
@@ -3613,7 +3587,6 @@ GameObject:
   - component: {fileID: 1266047637}
   - component: {fileID: 1266047636}
   - component: {fileID: 1266047635}
-  - component: {fileID: 1266047634}
   m_Layer: 0
   m_Name: momia
   m_TagString: bordePatrol
@@ -3621,31 +3594,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1266047634
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1266047633}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.017087713, y: -0.23278129}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.26, y: 0.48}
-    newSize: {x: 0.26, y: 0.48}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.167635, y: 0.014537334}
-  m_EdgeRadius: 0
 --- !u!50 &1266047635
 Rigidbody2D:
   serializedVersion: 4
@@ -3660,7 +3608,7 @@ Rigidbody2D:
   m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -4504,7 +4452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d164a6ac5399cb44184962a166c4d15a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 1408264428}
   PuntoAtaque: {fileID: 778658313}
   enemyLayer:
     serializedVersion: 2
@@ -4729,8 +4677,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 0
   healthBar: {fileID: 523351361}
-  animator: {fileID: 0}
-  rb: {fileID: 0}
+  animator: {fileID: 1408264428}
 --- !u!95 &1408264428
 Animator:
   serializedVersion: 3
@@ -6107,7 +6054,6 @@ GameObject:
   - component: {fileID: 1884086036}
   - component: {fileID: 1884086035}
   - component: {fileID: 1884086034}
-  - component: {fileID: 1884086033}
   m_Layer: 0
   m_Name: momia
   m_TagString: bordePatrol
@@ -6115,31 +6061,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1884086033
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1884086032}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.017087713, y: -0.23278129}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.26, y: 0.48}
-    newSize: {x: 0.26, y: 0.48}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.167635, y: 0.014537334}
-  m_EdgeRadius: 0
 --- !u!50 &1884086034
 Rigidbody2D:
   serializedVersion: 4
@@ -6154,7 +6075,7 @@ Rigidbody2D:
   m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

@@ -10,8 +10,6 @@ public class PlayerHealth : MonoBehaviour {
     public HealthBar healthBar;
 
     public Animator animator;
-
-    public Transform rb;
     
     // Use this for initialization
 	void Start () {
