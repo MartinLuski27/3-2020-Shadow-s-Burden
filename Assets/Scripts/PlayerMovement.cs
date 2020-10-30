@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
@@ -28,7 +29,7 @@ public class PlayerMovement : MonoBehaviour {
             animator.SetBool("Salto", true);
         }
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow) && SceneManager.GetActiveScene().buildIndex == 1)
         {
             semisolida1.SetActive(false);
             semisolida2.SetActive(false);

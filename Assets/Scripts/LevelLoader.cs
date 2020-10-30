@@ -8,6 +8,8 @@ public class LevelLoader : MonoBehaviour {
 
     public Animator Transition;
     public float transitionTime = 1f;
+    public GameObject gameManager;
+    public GameObject player;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -19,6 +21,11 @@ public class LevelLoader : MonoBehaviour {
 
     public void LoadNextLevel()
     {
+        this.gameManager = GameObject.Find("GameManager");
+
+        gameManager.GetComponent<DontDestroy>().health = player.GetComponent<PlayerHealth>().currentHealth;
+        gameManager.GetComponent<DontDestroy>().moralidad = player.GetComponent<PlayerHealth>().moralidad;
+
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 

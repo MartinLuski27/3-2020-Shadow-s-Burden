@@ -8,6 +8,7 @@ public class enemy : MonoBehaviour {
     public int maxHealth = 15;
     int currentHealth;
     public Animator animator;
+    public GameObject boss;
     
 
     void Start()
@@ -35,6 +36,5 @@ public class enemy : MonoBehaviour {
     {
         animator.SetBool("Muerto", true);
 		GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
     }
 }

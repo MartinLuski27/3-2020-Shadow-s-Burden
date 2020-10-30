@@ -2498,6 +2498,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+  player: {fileID: 0}
+  deathDelay: 2
   hurtSound: {fileID: 539222685}
   moralidad: 0
   healthBar: {fileID: 523351361}

@@ -2912,6 +2912,7 @@ GameObject:
   - component: {fileID: 1408264425}
   - component: {fileID: 1408264427}
   - component: {fileID: 1408264428}
+  - component: {fileID: 1408264429}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -3159,6 +3160,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   hurtSound: {fileID: 297397434}
+  moralidad: 0
   healthBar: {fileID: 523351361}
   animator: {fileID: 1408264428}
 --- !u!95 &1408264428
@@ -3179,6 +3181,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1408264429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1408264417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f824c5feb5718ac48a3ae2c411bb636e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 1773562789}
 --- !u!1 &1423201209
 GameObject:
   m_ObjectHideFlags: 0
@@ -3951,8 +3965,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95835a081644744b801068b5c807b2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 15
+  maxHealth: 5
   animator: {fileID: 1773562794}
+  boss: {fileID: 1773562789}
 --- !u!114 &1773562796
 MonoBehaviour:
   m_ObjectHideFlags: 0
