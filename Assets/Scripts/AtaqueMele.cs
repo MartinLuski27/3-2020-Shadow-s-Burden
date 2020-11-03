@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class AtaqueMele : MonoBehaviour {
@@ -36,7 +37,11 @@ public class AtaqueMele : MonoBehaviour {
 
         foreach(Collider2D enemy in golpearEnemigo)
         {
-            enemy.GetComponent<enemy>().TakeDamage(Daño);
+            Debug.Log("We hit " + enemy.name);
+            if (SceneManager.GetActiveScene().buildIndex != 3)
+                enemy.GetComponent<EnemyHealth>().TakeDamage(Daño);
+            else if (SceneManager.GetActiveScene().buildIndex == 3)
+                enemy.GetComponent<JefeHealthRemplazo>().TakeDamage(Daño);
         }
     }
     private void OnDrawGizmosSelected()

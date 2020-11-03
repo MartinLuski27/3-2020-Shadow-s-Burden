@@ -29,13 +29,20 @@ public class PlayerMovement : MonoBehaviour {
             animator.SetBool("Salto", true);
         }
 
-        if (Input.GetKey(KeyCode.DownArrow) && SceneManager.GetActiveScene().buildIndex == 1)
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            resetearSemisolidas();
+        }
+    }
+
+    public void resetearSemisolidas()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 1) 
         {
             semisolida1.SetActive(false);
             semisolida2.SetActive(false);
             semisolida3.SetActive(false);
         }
-
     }
 
     public void OnCollisionEnter2D(Collision2D info)

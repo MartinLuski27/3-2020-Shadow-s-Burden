@@ -18,11 +18,13 @@ public class NPCDialogue : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		if(Input.GetKeyDown(KeyCode.UpArrow) && DialogueActive)
 		{
 			if(DialogueBox.activeInHierarchy)
 			{
 				DialogueBox.SetActive(false);
+				ghastya.transform.position = this.gameObject.transform.position;
 				ghastya.SetActive(true);
 				GetComponent<Collider2D>().enabled = false;
 				GetComponent<SpriteRenderer>().enabled = false;

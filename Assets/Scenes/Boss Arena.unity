@@ -2912,7 +2912,6 @@ GameObject:
   - component: {fileID: 1408264425}
   - component: {fileID: 1408264427}
   - component: {fileID: 1408264428}
-  - component: {fileID: 1408264429}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -3159,10 +3158,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
+  respawnPoint: {fileID: 0}
+  resPointGhastya: {fileID: 0}
+  player: {fileID: 1408264417}
+  deathDelay: 2
   hurtSound: {fileID: 297397434}
   moralidad: 0
+  gameManager: {fileID: 0}
   healthBar: {fileID: 523351361}
   animator: {fileID: 1408264428}
+  canTakeDamage: 1
+  ghastya: {fileID: 0}
 --- !u!95 &1408264428
 Animator:
   serializedVersion: 3
@@ -3181,18 +3187,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1408264429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1408264417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f824c5feb5718ac48a3ae2c411bb636e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boss: {fileID: 1773562789}
 --- !u!1 &1423201209
 GameObject:
   m_ObjectHideFlags: 0
@@ -3822,9 +3816,9 @@ GameObject:
   - component: {fileID: 1773562793}
   - component: {fileID: 1773562792}
   - component: {fileID: 1773562794}
-  - component: {fileID: 1773562795}
   - component: {fileID: 1773562797}
   - component: {fileID: 1773562796}
+  - component: {fileID: 1773562798}
   m_Layer: 8
   m_Name: Jefe
   m_TagString: Boss
@@ -3954,20 +3948,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1773562795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1773562789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d95835a081644744b801068b5c807b2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 5
-  animator: {fileID: 1773562794}
-  boss: {fileID: 1773562789}
 --- !u!114 &1773562796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3998,6 +3978,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1221649255}
   isFlipped: 0
+--- !u!114 &1773562798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1773562789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 547e80d1ee4d7794a8f21f487aa162d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 15
+  animator: {fileID: 1773562794}
 --- !u!1 &1788354779
 GameObject:
   m_ObjectHideFlags: 0
@@ -4208,6 +4201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1931771582250444, guid: 29bad44efd85cc04ba1f327298b21661, type: 2}
+  gameManager: {fileID: 0}
+  hasGem: 0
 --- !u!212 &1857958668
 SpriteRenderer:
   m_ObjectHideFlags: 0

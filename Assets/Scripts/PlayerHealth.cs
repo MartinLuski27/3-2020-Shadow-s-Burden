@@ -6,19 +6,17 @@ public class PlayerHealth : MonoBehaviour {
 
     public int maxHealth = 5;
     public int currentHealth;
-
+    public Transform respawnPoint;
+    public Transform resPointGhastya;
     public GameObject player;
     public float deathDelay = 2;
-
     public AudioSource hurtSound;
-
     public int moralidad = 0;
-
     public GameObject gameManager;
-
     public HealthBar healthBar;
-
     public Animator animator;
+    public bool canTakeDamage = true;
+    public Transform ghastya;
 
     void Awake()
     {
@@ -45,14 +43,17 @@ public class PlayerHealth : MonoBehaviour {
     //El jugador recibe daño y se disminuye en la cantidad de daño recibido su vida
     public void takeDamage(int damage)
     {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
-        animator.SetTrigger("Hurt");
-        hurtSound.Play();
-
-        if (currentHealth <= 0f)
+        if (canTakeDamage)
         {
-            Die();
+            currentHealth -= damage;
+            healthBar.SetHealth(currentHealth);
+            animator.SetTrigger("Hurt");
+            hurtSound.Play();
+
+            if (currentHealth <= 0f)
+            {
+                Die();
+            }
         }
     }
 
@@ -60,14 +61,18 @@ public class PlayerHealth : MonoBehaviour {
     {
         animator.SetBool("Muerto", true);
         player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<PlayerMovement>().resetearSemisolidas();
+        canTakeDamage = false;
         StartCoroutine(ResetPos());
     }
 
     IEnumerator ResetPos()
     {
         yield return new WaitForSeconds(deathDelay);
-        player.transform.position = new Vector3(-69f, -3.75f, 0f);
+        player.transform.position = respawnPoint.position;
+        ghastya.position = resPointGhastya.position;
         player.GetComponent<PlayerMovement>().enabled = true;
+        canTakeDamage = true;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
