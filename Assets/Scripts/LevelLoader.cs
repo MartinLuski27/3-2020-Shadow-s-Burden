@@ -28,6 +28,15 @@ public class LevelLoader : MonoBehaviour {
 
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
+    public void LoadPrevLevel()
+    {
+        this.gameManager = GameObject.Find("GameManager");
+
+        gameManager.GetComponent<DontDestroy>().health = player.GetComponent<PlayerHealth>().currentHealth;
+        gameManager.GetComponent<DontDestroy>().moralidad = player.GetComponent<PlayerHealth>().moralidad;
+
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
+    }
 
 
     IEnumerator LoadLevel(int LevelIndex)

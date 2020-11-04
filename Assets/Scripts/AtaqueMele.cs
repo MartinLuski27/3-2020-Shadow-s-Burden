@@ -37,7 +37,6 @@ public class AtaqueMele : MonoBehaviour {
 
         foreach(Collider2D enemy in golpearEnemigo)
         {
-            Debug.Log("We hit " + enemy.name);
             if (SceneManager.GetActiveScene().buildIndex != 3)
                 enemy.GetComponent<EnemyHealth>().TakeDamage(Daño);
             else if (SceneManager.GetActiveScene().buildIndex == 3)

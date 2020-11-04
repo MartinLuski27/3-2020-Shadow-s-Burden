@@ -498,6 +498,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.7566223, y: 57.108566}
   m_EdgeRadius: 0
+--- !u!114 &250188772 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114656792915624992, guid: 1891abd4839a6624887fe8c28a325c07,
+    type: 2}
+  m_PrefabInternal: {fileID: 668091234}
+  m_Script: {fileID: 11500000, guid: 49cf70867771b674b9781d8fdbeece60, type: 3}
 --- !u!1 &297282830
 GameObject:
   m_ObjectHideFlags: 0
@@ -2290,6 +2296,11 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 95682528860098258, guid: 1891abd4839a6624887fe8c28a325c07,
     type: 2}
   m_PrefabInternal: {fileID: 668091234}
+--- !u!4 &668091236 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4134901241688862, guid: 1891abd4839a6624887fe8c28a325c07,
+    type: 2}
+  m_PrefabInternal: {fileID: 668091234}
 --- !u!1 &731783544
 GameObject:
   m_ObjectHideFlags: 0
@@ -3545,7 +3556,7 @@ MonoBehaviour:
   respawnPoint: {fileID: 187275360}
   resPointGhastya: {fileID: 108529659}
   player: {fileID: 1172183767}
-  deathDelay: 2
+  deathDelay: 1
   hurtSound: {fileID: 539222685}
   moralidad: 0
   gameManager: {fileID: 0}
@@ -3553,6 +3564,8 @@ MonoBehaviour:
   animator: {fileID: 1172183768}
   canTakeDamage: 1
   ghastya: {fileID: 515588037}
+  AIjefe: {fileID: 0}
+  levelLoader: {fileID: 0}
 --- !u!114 &1172183770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5695,6 +5708,73 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1429759668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1429759669}
+  - component: {fileID: 1429759671}
+  - component: {fileID: 1429759670}
+  m_Layer: 0
+  m_Name: TriggerVolver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1429759669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1429759668}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 668091236}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1429759670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1429759668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06325461f1a2a946a35268a90c502e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelLoader: {fileID: 250188772}
+--- !u!61 &1429759671
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1429759668}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -160.48822, y: -1.0557966}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2650146, y: 13.327356}
+  m_EdgeRadius: 0
 --- !u!1 &1536272972
 GameObject:
   m_ObjectHideFlags: 0
@@ -6605,7 +6685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1903216476
 AudioSource:
   m_ObjectHideFlags: 0

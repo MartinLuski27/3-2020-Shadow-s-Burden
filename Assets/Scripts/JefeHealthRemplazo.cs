@@ -39,7 +39,7 @@ public class JefeHealthRemplazo : MonoBehaviour {
     
     void Die()
     {
-        animator.SetBool("Muerto", true);
+        animator.SetTrigger("Muerto");
 		GetComponent<Collider2D>().enabled = false;
     }
 }

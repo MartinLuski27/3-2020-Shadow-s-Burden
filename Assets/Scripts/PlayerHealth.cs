@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
 
@@ -17,6 +18,8 @@ public class PlayerHealth : MonoBehaviour {
     public Animator animator;
     public bool canTakeDamage = true;
     public Transform ghastya;
+    public Animator AIjefe;
+    public LevelLoader levelLoader;
 
     void Awake()
     {
@@ -47,7 +50,8 @@ public class PlayerHealth : MonoBehaviour {
         {
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
-            animator.SetTrigger("Hurt");
+            if (currentHealth > 0)
+                animator.SetTrigger("Hurt");
             hurtSound.Play();
 
             if (currentHealth <= 0f)
@@ -59,7 +63,7 @@ public class PlayerHealth : MonoBehaviour {
 
     void Die()
     {
-        animator.SetBool("Muerto", true);
+        animator.SetTrigger("Muerto");
         player.GetComponent<PlayerMovement>().enabled = false;
         player.GetComponent<PlayerMovement>().resetearSemisolidas();
         canTakeDamage = false;
@@ -75,5 +79,12 @@ public class PlayerHealth : MonoBehaviour {
         canTakeDamage = true;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        animator.SetTrigger("Respawn");
+
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            AIjefe.enabled = false;
+            levelLoader.LoadPrevLevel();
+        }
     }
 }
