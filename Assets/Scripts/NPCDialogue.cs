@@ -10,6 +10,8 @@ public class NPCDialogue : MonoBehaviour {
 	public string Dialogue;
 	public bool DialogueActive;
 	public GameObject ghastya;
+	public GameObject player;
+	public bool hasEnteredAuto = false;
 
 	// Use this for initialization
 	void Start () {
@@ -19,21 +21,28 @@ public class NPCDialogue : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(Input.GetKeyDown(KeyCode.UpArrow) && DialogueActive)
+		if(DialogueActive)
 		{
-			if(DialogueBox.activeInHierarchy)
+			if (Input.GetKeyDown(KeyCode.UpArrow) || hasEnteredAuto)
 			{
-				DialogueBox.SetActive(false);
-				ghastya.transform.position = this.gameObject.transform.position;
-				ghastya.SetActive(true);
-				GetComponent<Collider2D>().enabled = false;
-				GetComponent<SpriteRenderer>().enabled = false;
-				this.enabled = false;
-			}
-			else
-			{
-				DialogueBox.SetActive(true);
-				DialogueText.text = Dialogue;
+				if (DialogueBox.activeInHierarchy)
+				{
+					DialogueBox.SetActive(false);
+					ghastya.transform.position = this.gameObject.transform.position;
+					ghastya.SetActive(true);
+					player.GetComponent<PlayerMovement>().ghastyaUnlocked = true;
+					GetComponent<Collider2D>().enabled = false;
+					GetComponent<SpriteRenderer>().enabled = false;
+					player.GetComponent<PlayerMovement>().enabled = true;
+					player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+					this.enabled = false;
+				}
+				else
+				{
+					DialogueBox.SetActive(true);
+					DialogueText.text = Dialogue;
+					hasEnteredAuto = false;
+				}
 			}
 		}
 		

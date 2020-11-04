@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour {
     public CharacterController2D controller;
     public Animator animator;
     public float runSpeed = 40;
+    public bool ghastyaUnlocked;
     
     float horizontalMove = 0;
     bool jump = false;
@@ -32,6 +33,14 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKey(KeyCode.DownArrow))
         {
             resetearSemisolidas();
+        }
+        if (Input.GetKeyDown(KeyCode.X) && ghastyaUnlocked)
+        {
+            this.gameObject.GetComponent<PlayerHealth>().Heal(2);
+        }
+        else if (Input.GetKeyDown(KeyCode.X) && SceneManager.GetActiveScene().buildIndex >= 2)
+        {
+            this.gameObject.GetComponent<PlayerHealth>().Heal(2);
         }
     }
 

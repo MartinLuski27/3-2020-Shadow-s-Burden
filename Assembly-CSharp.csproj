@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AutoDialogue.cs" />
      <Compile Include="Assets\Free Asset - 2D Handcrafted Art\Scriptshandcraft\CamerController.cs" />
      <Compile Include="Assets\MusicaPermanente.cs" />
      <Compile Include="Assets\Scripts\AI.cs" />

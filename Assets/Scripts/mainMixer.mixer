@@ -21,6 +21,7 @@ AudioMixerController:
   - guids:
     - 801c675e30799624186d66eaff44f30f
     - 7bf14a924eedc4f4e8469df3326bacf6
+    - d52309cb0e3b4f242a40359372c3d372
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -34,6 +35,7 @@ AudioMixerGroupController:
   m_GroupID: 801c675e30799624186d66eaff44f30f
   m_Children:
   - {fileID: 243753261126610084}
+  - {fileID: 243173888902673884}
   m_Volume: 9bd833818b827f240a00750bcaaae8e5
   m_Pitch: f00d7c18093e81149ae5ac0ba1cbbb24
   m_Effects:
@@ -66,7 +68,25 @@ AudioMixerSnapshotController:
   m_FloatValues:
     9bd833818b827f240a00750bcaaae8e5: 0
     00c5d3056ad984541b49b72ff4df34f6: 0.04171297
+    8a8d7dbde3f236547ae17d0d6d0e312b: 15.708343
   m_TransitionOverrides: {}
+--- !u!243 &243173888902673884
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: healCharge
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: d52309cb0e3b4f242a40359372c3d372
+  m_Children: []
+  m_Volume: 8a8d7dbde3f236547ae17d0d6d0e312b
+  m_Pitch: 716ccf8546a9d77419e57946f67504a1
+  m_Effects:
+  - {fileID: 244110745116573018}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &243753261126610084
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -84,6 +104,19 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &244110745116573018
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 83cea4424f268ac469a962e357594e7f
+  m_EffectName: Attenuation
+  m_MixLevel: 9effb70c70fb5514c82d8ffa1ed406be
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &244832890279767010
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
