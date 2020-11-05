@@ -83,7 +83,7 @@ public class PlayerHealth : MonoBehaviour {
             player.GetComponent<AtaqueMele>().enabled = false;
             player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             canHeal = false;
-            StartCoroutine(healDelay(3, 2, 5));
+            StartCoroutine(healDelay(3, 1, 5));
         }
     }
 
