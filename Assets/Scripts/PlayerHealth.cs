@@ -60,6 +60,7 @@ public class PlayerHealth : MonoBehaviour {
         {
             completeHealing = false;
             healCharge.Stop();
+            animator.SetBool("Heal", false);
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
             if (currentHealth > 0)
@@ -72,12 +73,13 @@ public class PlayerHealth : MonoBehaviour {
             }
         }
     }
-    public void Heal(int healing)
+    public void Heal()
     {
         if (canHeal && healingEnabled)
         {
             completeHealing = true;
             healCharge.Play();
+            animator.SetBool("Heal", true);
             animator.SetTrigger("forceIdle");
             player.GetComponent<PlayerMovement>().enabled = false;
             player.GetComponent<AtaqueMele>().enabled = false;
@@ -97,6 +99,7 @@ public class PlayerHealth : MonoBehaviour {
         if (completeHealing)
         {
             healComplete.Play();
+            animator.SetBool("Heal", false);
             currentHealth += hp;
             healthBar.SetHealth(currentHealth);
             if (currentHealth > maxHealth)

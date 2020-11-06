@@ -32,10 +32,14 @@ public class AtaqueMele : MonoBehaviour {
     void Ataque()
     {
         animator.SetTrigger("Ataque");
-        Collider2D[] golpearEnemigo = Physics2D.OverlapCircleAll(PuntoAtaque.position, Rango, enemyLayer);
         hitSound.Play();
+    }
 
-        foreach(Collider2D enemy in golpearEnemigo)
+    public void AttackDamage()
+    {
+        Collider2D[] golpearEnemigo = Physics2D.OverlapCircleAll(PuntoAtaque.position, Rango, enemyLayer);
+
+        foreach (Collider2D enemy in golpearEnemigo)
         {
             if (SceneManager.GetActiveScene().buildIndex != 3)
                 enemy.GetComponent<EnemyHealth>().TakeDamage(Daño);

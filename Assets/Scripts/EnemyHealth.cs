@@ -11,7 +11,7 @@ public class EnemyHealth : MonoBehaviour {
     int currentHealth;
     public Animator animator;
     public GameObject enemigo;
-    GameObject jugador;
+    public GameObject jugador;
 
     public int attackDamage2 = 1;
 	
@@ -67,8 +67,33 @@ public class EnemyHealth : MonoBehaviour {
         //Aca santi, que sabe, haga para que se destruya al morir, porque yo no puedo hacer cosas con las animaciones
         animator.SetBool("Muerto", true);
 		enemigo.GetComponent<Collider2D>().enabled = false;
-        enemigo.GetComponent<patrolAI>().enabled = false;
+        switch (gameObject.name)
+        {
+            case "momia":
+                enemigo.GetComponent<patrolAI>().enabled = false;
+                break;
+            case "rodadera":
+                enemigo.GetComponent<PlantaRodadera>().enabled = false;
+                break;
+        }
+        jugador.GetComponent<PlayerHealth>().moralidad--;
         StartCoroutine(Desaparecer());
+    }
+
+    public void Appeased()
+    {
+        enemigo.GetComponent<Collider2D>().enabled = false;
+        switch (gameObject.name)
+        {
+            case "momia":
+                enemigo.GetComponent<patrolAI>().enabled = false;
+                break;
+            case "rodadera":
+                enemigo.GetComponent<PlantaRodadera>().enabled = false;
+                enemigo.GetComponent<Rigidbody2D>().gravityScale = 1;
+                break;
+        }
+        animator.SetBool("Appeased", true);
     }
 
     IEnumerator Desaparecer()

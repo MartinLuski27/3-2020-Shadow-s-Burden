@@ -2946,7 +2946,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: c7fb888251f00524eb09d48d35309dbe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4575,7 +4575,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300008, guid: 317b8365a4649ab459f6cb58ec8f9f18, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d23a0691f9042e42befc1630d740d11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4634,8 +4634,8 @@ BoxCollider2D:
   m_Offset: {x: 0.042931795, y: 0.5883362}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1.5, y: 1.5}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 3}
     newSize: {x: 1.5, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4917,6 +4917,7 @@ MonoBehaviour:
   itemButton: {fileID: 1931771582250444, guid: 29bad44efd85cc04ba1f327298b21661, type: 2}
   gameManager: {fileID: 0}
   hasGem: 0
+  pickupSound: {fileID: 0}
 --- !u!212 &1857958668
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5025,6 +5026,10 @@ Prefab:
       propertyPath: Transition
       value: 
       objectReference: {fileID: 1962287700}
+    - target: {fileID: 1474766809478730, guid: 1891abd4839a6624887fe8c28a325c07, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1891abd4839a6624887fe8c28a325c07, type: 2}
   m_IsPrefabAsset: 0

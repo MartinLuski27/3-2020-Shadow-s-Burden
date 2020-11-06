@@ -36,11 +36,11 @@ public class PlayerMovement : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.X) && ghastyaUnlocked)
         {
-            this.gameObject.GetComponent<PlayerHealth>().Heal(2);
+            this.gameObject.GetComponent<PlayerHealth>().Heal();
         }
         else if (Input.GetKeyDown(KeyCode.X) && SceneManager.GetActiveScene().buildIndex >= 2)
         {
-            this.gameObject.GetComponent<PlayerHealth>().Heal(2);
+            this.gameObject.GetComponent<PlayerHealth>().Heal();
         }
     }
 

@@ -8,6 +8,7 @@ public class PickUp : MonoBehaviour {
     public GameObject itemButton;
     public GameObject gameManager;
     public bool hasGem;
+    public AudioSource pickupSound;
 
     private void Start()
     {
@@ -26,7 +27,7 @@ public class PickUp : MonoBehaviour {
         {
             hasGem = true;
             gameManager.GetComponent<DontDestroy>().hasGem = hasGem;
-            Debug.Log("gem aquired :D");
+            pickupSound.Play();
 
             for (int i = 0; i < inventory.slots.Length; i++)
             {
