@@ -41,9 +41,9 @@ public class AtaqueMele : MonoBehaviour {
 
         foreach (Collider2D enemy in golpearEnemigo)
         {
-            if (SceneManager.GetActiveScene().buildIndex != 3)
+            if (SceneManager.GetActiveScene().buildIndex != 4)
                 enemy.GetComponent<EnemyHealth>().TakeDamage(Daño);
-            else if (SceneManager.GetActiveScene().buildIndex == 3)
+            else if (SceneManager.GetActiveScene().buildIndex == 4)
                 enemy.GetComponent<JefeHealthRemplazo>().TakeDamage(Daño);
         }
     }

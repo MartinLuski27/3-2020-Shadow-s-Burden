@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 74731240}
   - component: {fileID: 74731239}
   m_Layer: 8
-  m_Name: rodadera
+  m_Name: rodadera3
   m_TagString: bordePatrol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -412,7 +412,6 @@ MonoBehaviour:
   animator: {fileID: 74731242}
   enemigo: {fileID: 74731237}
   jugador: {fileID: 1172183767}
-  gameManager: {fileID: 0}
   attackDamage2: 1
   attackOffset: {x: 0, y: 0, z: 0}
   attackRange: 1
@@ -1400,7 +1399,7 @@ GameObject:
   - component: {fileID: 464116311}
   - component: {fileID: 464116310}
   m_Layer: 8
-  m_Name: rodadera
+  m_Name: rodadera5
   m_TagString: bordePatrol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1466,7 +1465,6 @@ MonoBehaviour:
   animator: {fileID: 464116313}
   enemigo: {fileID: 464116308}
   jugador: {fileID: 1172183767}
-  gameManager: {fileID: 0}
   attackDamage2: 1
   attackOffset: {x: 0, y: 0, z: 0}
   attackRange: 1
@@ -4234,7 +4232,7 @@ GameObject:
   - component: {fileID: 1085403427}
   - component: {fileID: 1085403426}
   m_Layer: 8
-  m_Name: rodadera
+  m_Name: rodadera2
   m_TagString: bordePatrol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4300,7 +4298,6 @@ MonoBehaviour:
   animator: {fileID: 1085403429}
   enemigo: {fileID: 1085403424}
   jugador: {fileID: 1172183767}
-  gameManager: {fileID: 0}
   attackDamage2: 1
   attackOffset: {x: 0, y: 0, z: 0}
   attackRange: 1
@@ -4915,7 +4912,7 @@ GameObject:
   - component: {fileID: 1183713767}
   - component: {fileID: 1183713768}
   m_Layer: 8
-  m_Name: rodadera
+  m_Name: rodadera1
   m_TagString: bordePatrol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4936,7 +4933,6 @@ MonoBehaviour:
   animator: {fileID: 1183713763}
   enemigo: {fileID: 1183713761}
   jugador: {fileID: 1172183767}
-  gameManager: {fileID: 0}
   attackDamage2: 1
   attackOffset: {x: 0, y: 0, z: 0}
   attackRange: 1
@@ -5066,7 +5062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64eacdd395851b74c97835b407986a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
 --- !u!1 &1185768324
 GameObject:
   m_ObjectHideFlags: 0
@@ -7061,7 +7057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1429759669
 Transform:
   m_ObjectHideFlags: 0
@@ -7957,7 +7953,7 @@ GameObject:
   - component: {fileID: 1764690360}
   - component: {fileID: 1764690359}
   m_Layer: 8
-  m_Name: rodadera
+  m_Name: rodadera4
   m_TagString: bordePatrol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8023,7 +8019,6 @@ MonoBehaviour:
   animator: {fileID: 1764690362}
   enemigo: {fileID: 1764690357}
   jugador: {fileID: 1172183767}
-  gameManager: {fileID: 0}
   attackDamage2: 1
   attackOffset: {x: 0, y: 0, z: 0}
   attackRange: 1

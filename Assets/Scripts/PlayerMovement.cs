@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             this.gameObject.GetComponent<PlayerHealth>().Heal();
         }
-        else if (Input.GetKeyDown(KeyCode.A) && SceneManager.GetActiveScene().buildIndex >= 2)
+        else if (Input.GetKeyDown(KeyCode.A) && SceneManager.GetActiveScene().buildIndex >= 3)
         {
             this.gameObject.GetComponent<PlayerHealth>().Heal();
         }
@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public void resetearSemisolidas()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 1) 
+        if (SceneManager.GetActiveScene().buildIndex == 2) 
         {
             semisolida1.SetActive(false);
             semisolida2.SetActive(false);

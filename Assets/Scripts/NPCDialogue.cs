@@ -15,7 +15,7 @@ public class NPCDialogue : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		ghastya.SetActive(false);
 	}
 	
 	// Update is called once per frame

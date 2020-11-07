@@ -44,7 +44,7 @@ public class Apaciguar : MonoBehaviour {
         
         foreach (Collider2D enemy in apaciguarEnemigo)
         {
-            if (SceneManager.GetActiveScene().buildIndex != 3)
+            if (SceneManager.GetActiveScene().buildIndex != 4)
             {
                 enemy.GetComponent<EnemyHealth>().Appeased();
                 this.gameObject.GetComponent<PlayerHealth>().moralidad++;

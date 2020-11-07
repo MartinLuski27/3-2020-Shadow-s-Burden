@@ -281,7 +281,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &109212326
 GameObject:
@@ -595,7 +595,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &244085191
 GameObject:
@@ -806,7 +806,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &364408426
 GameObject:
@@ -1636,7 +1636,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -63.60826, y: -2.8919513, z: -10}
+  m_LocalPosition: {x: -63.60853, y: -3.0119507, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1800,7 +1800,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 529916048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -69, y: -2.88, z: -10}
+  m_LocalPosition: {x: -69, y: -3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 244085192}
@@ -1912,7 +1912,7 @@ GameObject:
   - component: {fileID: 626038228}
   - component: {fileID: 626038230}
   m_Layer: 8
-  m_Name: momia
+  m_Name: momia2
   m_TagString: bordePatrol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2068,7 +2068,6 @@ MonoBehaviour:
   animator: {fileID: 626038224}
   enemigo: {fileID: 626038223}
   jugador: {fileID: 1408264417}
-  gameManager: {fileID: 0}
   attackDamage2: 1
   attackOffset: {x: 0, y: 0, z: 0}
   attackRange: 1
@@ -2660,7 +2659,7 @@ RectTransform:
   - {fileID: 121901768}
   - {fileID: 109212327}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2785,7 +2784,7 @@ Transform:
   m_Children:
   - {fileID: 1266047640}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &903460384
 GameObject:
@@ -3119,7 +3118,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &940994973
 GameObject:
@@ -3326,7 +3325,7 @@ Transform:
   m_LocalScale: {x: 4.8134947, y: 4.8134947, z: 4.8134947}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &960969785
 GameObject:
@@ -3358,7 +3357,7 @@ Transform:
   - {fileID: 434360104}
   - {fileID: 1874048594}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1003267917
 GameObject:
@@ -3427,7 +3426,7 @@ Transform:
   m_Children:
   - {fileID: 626038226}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1003267921
 BoxCollider2D:
@@ -3576,7 +3575,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1049875909
 GameObject:
@@ -3910,7 +3909,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1167966561
 GameObject:
@@ -4035,7 +4034,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1185768324
 GameObject:
@@ -4316,7 +4315,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1190890794
 GameObject:
@@ -4533,7 +4532,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1408264417}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -69, y: -2.88, z: 0}
+  m_LocalPosition: {x: -69, y: -3, z: 0}
   m_LocalScale: {x: 11.384707, y: 11.384707, z: 11.384707}
   m_Children:
   - {fileID: 428677784}
@@ -4541,7 +4540,7 @@ Transform:
   - {fileID: 778658313}
   - {fileID: 941421958}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1266047633
 GameObject:
@@ -4558,7 +4557,7 @@ GameObject:
   - component: {fileID: 1266047635}
   - component: {fileID: 1266047634}
   m_Layer: 8
-  m_Name: momia
+  m_Name: momia1
   m_TagString: bordePatrol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4579,7 +4578,6 @@ MonoBehaviour:
   animator: {fileID: 1266047638}
   enemigo: {fileID: 1266047633}
   jugador: {fileID: 1408264417}
-  gameManager: {fileID: 0}
   attackDamage2: 1
   attackOffset: {x: 0, y: 0, z: 0}
   attackRange: 1
@@ -4790,52 +4788,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1292367107}
   m_CullTransparentMesh: 0
---- !u!1 &1307821151
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1307821153}
-  - component: {fileID: 1307821152}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1307821152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1307821151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a64b1ae5cb18c0c448cb21292b84b4ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moralidad: 0
-  hasGem: 0
-  health: 5
-  deadEnemy: {fileID: 0}
-  deadEnemiesScene1: []
-  deadEnemiesScene2: []
---- !u!4 &1307821153
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1307821151}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1314415612
 Prefab:
   m_ObjectHideFlags: 0
@@ -4873,7 +4825,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4513644938780778, guid: ef5fbabc6df97454c8e85ec86c056997, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 114321911498448072, guid: ef5fbabc6df97454c8e85ec86c056997,
         type: 2}
@@ -4899,7 +4851,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1678411717082362, guid: ef5fbabc6df97454c8e85ec86c056997, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1678411717082362, guid: ef5fbabc6df97454c8e85ec86c056997, type: 2}
+      propertyPath: m_Name
+      value: Ghastya
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef5fbabc6df97454c8e85ec86c056997, type: 2}
@@ -5181,7 +5137,7 @@ Transform:
   m_Children:
   - {fileID: 506564653}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1342218810
 GameObject:
@@ -5838,7 +5794,7 @@ Transform:
   m_LocalScale: {x: 5.8572636, y: 5.7899704, z: 4.668869}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1490734269
 Prefab:
@@ -5988,7 +5944,7 @@ Transform:
   m_Children:
   - {fileID: 1884086039}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1536272972
 GameObject:
@@ -6567,7 +6523,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1752924781
 GameObject:
@@ -6845,7 +6801,7 @@ Transform:
   m_LocalScale: {x: 6.179837, y: 6.179837, z: 6.179837}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1866561369
 GameObject:
@@ -7059,7 +7015,7 @@ GameObject:
   - component: {fileID: 1884086034}
   - component: {fileID: 1884086033}
   m_Layer: 8
-  m_Name: momia
+  m_Name: momia3
   m_TagString: bordePatrol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7080,7 +7036,6 @@ MonoBehaviour:
   animator: {fileID: 1884086037}
   enemigo: {fileID: 1884086032}
   jugador: {fileID: 1408264417}
-  gameManager: {fileID: 0}
   attackDamage2: 1
   attackOffset: {x: 0, y: 0, z: 0}
   attackRange: 1
@@ -7345,7 +7300,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1980055547
 GameObject:

@@ -163,7 +163,7 @@ public class PlayerHealth : MonoBehaviour {
         healthBar.SetMaxHealth(maxHealth);
         animator.SetTrigger("Respawn");
 
-        if (SceneManager.GetActiveScene().buildIndex == 3)
+        if (SceneManager.GetActiveScene().buildIndex == 4)
         {
             AIjefe.enabled = false;
             levelLoader.LoadPrevLevel();

@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour {
     public Animator animator;
     public GameObject enemigo;
     public GameObject jugador;
+    GameObject gameManager;
 
     public int attackDamage2 = 1;
     bool canDie = true;
@@ -25,6 +26,7 @@ public class EnemyHealth : MonoBehaviour {
     void Start()
     {
         currentHealth = maxHealth;
+        gameManager = GameObject.Find("GameManager");
 	}
 
     void Update()
@@ -69,36 +71,99 @@ public class EnemyHealth : MonoBehaviour {
         //Aca santi, que sabe, haga para que se destruya al morir, porque yo no puedo hacer cosas con las animaciones
         animator.SetBool("Muerto", true);
 		enemigo.GetComponent<Collider2D>().enabled = false;
+        gameManager.GetComponent<DontDestroy>().noRespawnEnemies.Add(this.gameObject.name);
         switch (gameObject.name)
         {
-            case "momia":
+            case "momia1":
                 enemigo.GetComponent<patrolAI>().enabled = false;
+                enemigo.GetComponent<Collider2D>().enabled = false;
                 break;
-            case "rodadera":
+            case "momia2":
+                enemigo.GetComponent<patrolAI>().enabled = false;
+                enemigo.GetComponent<Collider2D>().enabled = false;
+                break;
+            case "momia3":
+                enemigo.GetComponent<patrolAI>().enabled = false;
+                enemigo.GetComponent<Collider2D>().enabled = false;
+                break;
+
+            case "rodadera1":
                 enemigo.GetComponent<PlantaRodadera>().enabled = false;
+                enemigo.GetComponent<Collider2D>().enabled = false;
                 break;
+            case "rodadera2":
+                enemigo.GetComponent<PlantaRodadera>().enabled = false;
+                enemigo.GetComponent<Collider2D>().enabled = false;
+                break;
+            case "rodadera3":
+                enemigo.GetComponent<PlantaRodadera>().enabled = false;
+                enemigo.GetComponent<Collider2D>().enabled = false;
+                break;
+            case "rodadera4":
+                enemigo.GetComponent<PlantaRodadera>().enabled = false;
+                enemigo.GetComponent<Collider2D>().enabled = false;
+                break;
+            case "rodadera5":
+                enemigo.GetComponent<PlantaRodadera>().enabled = false;
+                enemigo.GetComponent<Collider2D>().enabled = false;
+                break;
+
         }
         jugador.GetComponent<PlayerHealth>().moralidad--;
         StartCoroutine(Desaparecer());
     }
 
+    void AppeasedPlant()
+    {
+        enemigo.GetComponent<Rigidbody2D>().gravityScale = 1;
+        enemigo.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        enemigo.GetComponent<Collider2D>().isTrigger = false;
+    }
+
     public void Appeased()
     {
-        canDie = false;
-        switch (gameObject.name)
+        if (canDie)
         {
-            case "momia":
-                enemigo.GetComponent<patrolAI>().enabled = false;
-                enemigo.GetComponent<Collider2D>().enabled = false;
-                break;
-            case "rodadera":
-                enemigo.GetComponent<PlantaRodadera>().enabled = false;
-                enemigo.GetComponent<Rigidbody2D>().gravityScale = 1;
-                enemigo.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-                enemigo.GetComponent<Collider2D>().isTrigger = false;
-                break;
+            canDie = false;
+            gameManager.GetComponent<DontDestroy>().noRespawnEnemies.Add(this.gameObject.name);
+            switch (gameObject.name)
+            {
+                case "momia1":
+                    enemigo.GetComponent<patrolAI>().enabled = false;
+                    enemigo.GetComponent<Collider2D>().enabled = false;
+                    break;
+                case "momia2":
+                    enemigo.GetComponent<patrolAI>().enabled = false;
+                    enemigo.GetComponent<Collider2D>().enabled = false;
+                    break;
+                case "momia3":
+                    enemigo.GetComponent<patrolAI>().enabled = false;
+                    enemigo.GetComponent<Collider2D>().enabled = false;
+                    break;
+
+                case "rodadera1":
+                    enemigo.GetComponent<PlantaRodadera>().enabled = false;
+                    AppeasedPlant();
+                    break;
+                case "rodadera2":
+                    enemigo.GetComponent<PlantaRodadera>().enabled = false;
+                    AppeasedPlant();
+                    break;
+                case "rodadera3":
+                    enemigo.GetComponent<PlantaRodadera>().enabled = false;
+                    AppeasedPlant();
+                    break;
+                case "rodadera4":
+                    enemigo.GetComponent<PlantaRodadera>().enabled = false;
+                    AppeasedPlant();
+                    break;
+                case "rodadera5":
+                    enemigo.GetComponent<PlantaRodadera>().enabled = false;
+                    AppeasedPlant();
+                    break;
+            }
+            animator.SetBool("Appeased", true);
         }
-        animator.SetBool("Appeased", true);
     }
 
     IEnumerator Desaparecer()
@@ -106,8 +171,9 @@ public class EnemyHealth : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         this.gameObject.SetActive(false);
     }
-
-    /*public void Attack()
+    
+    /*
+    public void Attack()
 	{
 		Vector3 pos = transform.position;
 		pos += transform.right * attackOffset.x;
@@ -118,7 +184,7 @@ public class EnemyHealth : MonoBehaviour {
 		{
 			colInfo.GetComponent<PlayerHealth>().takeDamage(attackDamage2);
 		}
-	}*/
+	}
 
 	void OnDrawGizmosSelected()
 	{
@@ -129,4 +195,5 @@ public class EnemyHealth : MonoBehaviour {
 
 		Gizmos.DrawWireSphere(pos, attackRange);
 	}
+    */
 }
