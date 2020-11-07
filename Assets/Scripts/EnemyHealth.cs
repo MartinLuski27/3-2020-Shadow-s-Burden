@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour {
@@ -14,6 +15,7 @@ public class EnemyHealth : MonoBehaviour {
     public GameObject jugador;
 
     public int attackDamage2 = 1;
+    bool canDie = true;
 	
 	public Vector3 attackOffset;
 	public float attackRange = 1f;
@@ -52,11 +54,11 @@ public class EnemyHealth : MonoBehaviour {
         currentHealth -= damage;
         
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && canDie)
         {
             Die();
         }
-        else
+        else if (canDie)
         {
             animator.SetTrigger("Hurt");
         }
@@ -82,15 +84,18 @@ public class EnemyHealth : MonoBehaviour {
 
     public void Appeased()
     {
-        enemigo.GetComponent<Collider2D>().enabled = false;
+        canDie = false;
         switch (gameObject.name)
         {
             case "momia":
                 enemigo.GetComponent<patrolAI>().enabled = false;
+                enemigo.GetComponent<Collider2D>().enabled = false;
                 break;
             case "rodadera":
                 enemigo.GetComponent<PlantaRodadera>().enabled = false;
                 enemigo.GetComponent<Rigidbody2D>().gravityScale = 1;
+                enemigo.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+                enemigo.GetComponent<Collider2D>().isTrigger = false;
                 break;
         }
         animator.SetBool("Appeased", true);
@@ -99,7 +104,7 @@ public class EnemyHealth : MonoBehaviour {
     IEnumerator Desaparecer()
     {
         yield return new WaitForSeconds(1f);
-        Destroy(this.gameObject);
+        this.gameObject.SetActive(false);
     }
 
     /*public void Attack()

@@ -34,11 +34,11 @@ public class PlayerMovement : MonoBehaviour {
         {
             resetearSemisolidas();
         }
-        if (Input.GetKeyDown(KeyCode.X) && ghastyaUnlocked)
+        if (Input.GetKeyDown(KeyCode.A) && ghastyaUnlocked)
         {
             this.gameObject.GetComponent<PlayerHealth>().Heal();
         }
-        else if (Input.GetKeyDown(KeyCode.X) && SceneManager.GetActiveScene().buildIndex >= 2)
+        else if (Input.GetKeyDown(KeyCode.A) && SceneManager.GetActiveScene().buildIndex >= 2)
         {
             this.gameObject.GetComponent<PlayerHealth>().Heal();
         }

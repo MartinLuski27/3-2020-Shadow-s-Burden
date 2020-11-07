@@ -818,7 +818,7 @@ GameObject:
   - component: {fileID: 364408427}
   - component: {fileID: 364408429}
   - component: {fileID: 364408430}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: semisolid1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2068,6 +2068,7 @@ MonoBehaviour:
   animator: {fileID: 626038224}
   enemigo: {fileID: 626038223}
   jugador: {fileID: 1408264417}
+  gameManager: {fileID: 0}
   attackDamage2: 1
   attackOffset: {x: 0, y: 0, z: 0}
   attackRange: 1
@@ -3655,9 +3656,9 @@ EdgeCollider2D:
   - {x: -1.2759668, y: -1.4452307}
   - {x: 1.2905489, y: -1.4450926}
   - {x: 1.2911366, y: -1.1179142}
-  - {x: 1.6174682, y: -1.1176975}
-  - {x: 1.6181561, y: 0.7890502}
-  - {x: 2.2427042, y: 0.7890772}
+  - {x: 1.5964367, y: -1.1190538}
+  - {x: 1.5966606, y: 0.80009615}
+  - {x: 2.2392936, y: 0.80067253}
   - {x: 2.2436726, y: -1.4445533}
   - {x: 3.5413544, y: -1.4463131}
   - {x: 3.541735, y: 0.14743266}
@@ -3672,9 +3673,9 @@ EdgeCollider2D:
   - {x: 15.376971, y: -0.4768339}
   - {x: 15.376143, y: 1.7567929}
   - {x: 0.6488917, y: 1.7596735}
-  - {x: 0.64735943, y: -0.78827256}
-  - {x: 0.007321466, y: -0.7894619}
-  - {x: 0.00489555, y: 0.7982295}
+  - {x: 0.6456168, y: -0.7993094}
+  - {x: 0.000736731, y: -0.799339}
+  - {x: -0.00016327127, y: 0.7995915}
   - {x: -1.2750978, y: 0.8038019}
   - {x: -1.2740977, y: 1.1167641}
   - {x: 0.0071515865, y: 1.1181277}
@@ -4578,6 +4579,7 @@ MonoBehaviour:
   animator: {fileID: 1266047638}
   enemigo: {fileID: 1266047633}
   jugador: {fileID: 1408264417}
+  gameManager: {fileID: 0}
   attackDamage2: 1
   attackOffset: {x: 0, y: 0, z: 0}
   attackRange: 1
@@ -4818,6 +4820,9 @@ MonoBehaviour:
   moralidad: 0
   hasGem: 0
   health: 5
+  deadEnemy: {fileID: 0}
+  deadEnemiesScene1: []
+  deadEnemiesScene2: []
 --- !u!4 &1307821153
 Transform:
   m_ObjectHideFlags: 0
@@ -5088,7 +5093,7 @@ MonoBehaviour:
   DialogueText: {fileID: 1752924783}
   Dialogue: "Hola, yo soy Ghastya. A partir de este momento, estoy jurada a ti y te
     ayudar\xE9 al m\xE1ximo de mis capacidades. Con mis poderes, puedes curarte oprimiendo
-    X. Ahora vamos, salgamos de esta piramide."
+    A. Ahora vamos, salgamos de esta piramide. (Oprime \u2191 para continuar)"
   DialogueActive: 0
   ghastya: {fileID: 1137105375}
   player: {fileID: 1408264417}
@@ -5105,7 +5110,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.21325588, y: -11.40398}
+  m_Offset: {x: 0.21325684, y: 15.471492}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5116,7 +5121,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 45.279213, y: 30.007961}
+  m_Size: {x: 45.279213, y: 83.75893}
   m_EdgeRadius: 0
 --- !u!212 &1335868191
 SpriteRenderer:
@@ -6151,7 +6156,7 @@ GameObject:
   - component: {fileID: 1566819246}
   - component: {fileID: 1566819248}
   - component: {fileID: 1566819247}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: semisolid3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6619,11 +6624,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: 89b05b3ff251bc34f959a99d682008db, type: 3}
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -7075,6 +7080,7 @@ MonoBehaviour:
   animator: {fileID: 1884086037}
   enemigo: {fileID: 1884086032}
   jugador: {fileID: 1408264417}
+  gameManager: {fileID: 0}
   attackDamage2: 1
   attackOffset: {x: 0, y: 0, z: 0}
   attackRange: 1
@@ -7569,7 +7575,7 @@ GameObject:
   - component: {fileID: 2075450646}
   - component: {fileID: 2075450648}
   - component: {fileID: 2075450647}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: semisolid2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

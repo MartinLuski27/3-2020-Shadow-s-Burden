@@ -21,7 +21,7 @@ public class AtaqueMele : MonoBehaviour {
     {
         if(Time.time >+ NextAttackTime)
         {
-                if (Input.GetKeyDown(KeyCode.Z))
+                if (Input.GetKeyDown(KeyCode.X))
             {
                 Ataque();
                 NextAttackTime = Time.time + 1f / AttackRate;

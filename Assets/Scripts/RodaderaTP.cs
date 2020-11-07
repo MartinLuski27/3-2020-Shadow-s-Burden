@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class RodaderaTP : MonoBehaviour {
 
-    public GameObject rodadera;
-
     void OnTriggerEnter2D(Collider2D collInfo)
     {
         if (collInfo.gameObject.tag == "bordePatrol")
         {
-            rodadera.GetComponent<PlantaRodadera>().Teleport();
+            collInfo.gameObject.GetComponent<PlantaRodadera>().Teleport();
         }
     }
 }

@@ -12,6 +12,6 @@ public class PlantaRodadera : MonoBehaviour {
     }
 	public void Teleport()
     {
-        this.gameObject.transform.position = new Vector3(360f, transform.position.y, 0f);
+        this.gameObject.transform.position = new Vector3(290, transform.position.y, 0f);
     }
 }

@@ -39,6 +39,7 @@ public class PlayerHealth : MonoBehaviour {
         currentHealth = gameManager.GetComponent<DontDestroy>().health;
         healthBar.SetHealth(currentHealth);
 
+        moralidad = gameManager.GetComponent<DontDestroy>().moralidad;
     }
 
     // Update is called once per frame
@@ -55,6 +56,34 @@ public class PlayerHealth : MonoBehaviour {
 
     //El jugador recibe daño y se disminuye en la cantidad de daño recibido su vida
     public void takeDamage(int damage)
+    {
+        if (canTakeDamage)
+        {
+            completeHealing = false;
+            healCharge.Stop();
+            animator.SetBool("Heal", false);
+            currentHealth -= damage;
+            healthBar.SetHealth(currentHealth);
+            if (currentHealth > 0)
+            {
+                animator.SetTrigger("Hurt");
+            }
+            hurtSound.Play();
+            if (currentHealth <= 0f)
+            {
+                Die();
+            }
+            StartCoroutine(iFrames(1f));
+        }
+    }
+    IEnumerator iFrames(float delay)
+    {
+        canTakeDamage = false;
+        yield return new WaitForSeconds(delay);
+        canTakeDamage = true;
+    }
+
+    public void takeQuicksandDamage(int damage)
     {
         if (canTakeDamage)
         {

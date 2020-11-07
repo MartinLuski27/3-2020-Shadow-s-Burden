@@ -34,7 +34,7 @@ public class Quicksand : MonoBehaviour {
     {
 		while (isInQuicksand)
 		{
-			player.GetComponent<PlayerHealth>().takeDamage(1);
+			player.GetComponent<PlayerHealth>().takeQuicksandDamage(1);
 			yield return new WaitForSeconds(0.5f);
 			if (player.GetComponent<PlayerHealth>().currentHealth <= 0)
 				isInQuicksand = false;
