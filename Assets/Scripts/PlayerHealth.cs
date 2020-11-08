@@ -23,9 +23,11 @@ public class PlayerHealth : MonoBehaviour {
     public LevelLoader levelLoader;
     public bool canHeal;
     bool healingEnabled = true;
+    bool isHealing;
     public bool completeHealing = true;
     public AudioSource healCharge;
     public AudioSource healComplete;
+    public Animator healIndicador;
 
     void Awake()
     {
@@ -62,11 +64,19 @@ public class PlayerHealth : MonoBehaviour {
             completeHealing = false;
             healCharge.Stop();
             animator.SetBool("Heal", false);
+            player.GetComponent<PlayerMovement>().enabled = true;
+            player.GetComponent<AtaqueMele>().enabled = true;
+            player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+            if (isHealing)
+            {
+                healIndicador.SetTrigger("Recharge");
+                isHealing = false;
+            }
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
             if (currentHealth > 0)
             {
-                animator.SetTrigger("Hurt");
+                animator.SetTrigger("Hurt"); //Nice
             }
             hurtSound.Play();
             if (currentHealth <= 0f)
@@ -106,6 +116,7 @@ public class PlayerHealth : MonoBehaviour {
     {
         if (canHeal && healingEnabled)
         {
+            isHealing = true;
             completeHealing = true;
             healCharge.Play();
             animator.SetBool("Heal", true);
@@ -129,6 +140,7 @@ public class PlayerHealth : MonoBehaviour {
         {
             healComplete.Play();
             animator.SetBool("Heal", false);
+            healIndicador.SetTrigger("Recharge");
             currentHealth += hp;
             healthBar.SetHealth(currentHealth);
             if (currentHealth > maxHealth)
@@ -138,6 +150,7 @@ public class PlayerHealth : MonoBehaviour {
         }
         yield return new WaitForSeconds(cooldown);
         healingEnabled = true;
+        isHealing = false;
     }
 
     void Die()

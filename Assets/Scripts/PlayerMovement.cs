@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour {
     public Animator animator;
     public float runSpeed = 40;
     public bool ghastyaUnlocked;
+    public GameObject healIndicator;
     
     float horizontalMove = 0;
     bool jump = false;
@@ -19,6 +20,12 @@ public class PlayerMovement : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+
+        if (SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 4 || ghastyaUnlocked)
+        {
+            healIndicator.SetActive(true);
+        }
+
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
         animator.SetFloat("Velocidad", Mathf.Abs(horizontalMove));

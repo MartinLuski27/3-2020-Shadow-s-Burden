@@ -48,7 +48,7 @@ public class PauseMenu : MonoBehaviour {
     //Función que sale al menú principal (no guarda porque el juego es corto y no es necesario).
     public void GuardarySalir ()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         UIsound2.Play();
     }
 }

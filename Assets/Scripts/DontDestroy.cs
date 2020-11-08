@@ -27,7 +27,11 @@ public class DontDestroy : MonoBehaviour {
 
 	void OnLevelWasLoaded()
     {
-		Debug.Log("Scene '" + SceneManager.GetActiveScene().name + "' loaded");
+		if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+			ResetValues();
+        }
+
 		foreach (string enemyName in noRespawnEnemies)
         {
 			noRespawnEnemy = GameObject.Find(enemyName); //usar los nombres de la lista para encontrar a los enemigos, uno por uno
@@ -52,4 +56,16 @@ public class DontDestroy : MonoBehaviour {
 			specialSpawnPoint = false;
         }
     }
+
+	void ResetValues()
+    {
+		moralidad = 0;
+		hasGem = false;
+		health = 5;
+		specialSpawnPoint = false;
+		player = null;
+		ghastya = null;
+		noRespawnEnemy = null;
+		noRespawnEnemies.Clear();
+	}
 }

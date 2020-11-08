@@ -63,9 +63,20 @@ public class EnemyHealth : MonoBehaviour {
         else if (canDie)
         {
             animator.SetTrigger("Hurt");
+            StartCoroutine(hurtStandStill());
         }
     }
-    
+
+    IEnumerator hurtStandStill()
+    {
+        if (gameObject.name == "Eagle")
+        {
+            gameObject.GetComponent<AI>().enabled = false;
+            yield return new WaitForSeconds(1f);
+            gameObject.GetComponent<AI>().enabled = true;
+        }
+    }
+
     void Die()
     {
         //Aca santi, que sabe, haga para que se destruya al morir, porque yo no puedo hacer cosas con las animaciones
@@ -108,6 +119,11 @@ public class EnemyHealth : MonoBehaviour {
                 enemigo.GetComponent<Collider2D>().enabled = false;
                 break;
 
+            case "Eagle":
+                enemigo.GetComponent<AI>().enabled = false;
+                enemigo.GetComponent<Collider2D>().enabled = false;
+                enemigo.transform.GetChild(0).GetComponent<Collider2D>().enabled = false;
+                break;
         }
         jugador.GetComponent<PlayerHealth>().moralidad--;
         StartCoroutine(Desaparecer());
@@ -160,6 +176,12 @@ public class EnemyHealth : MonoBehaviour {
                 case "rodadera5":
                     enemigo.GetComponent<PlantaRodadera>().enabled = false;
                     AppeasedPlant();
+                    break;
+
+                case "Eagle":
+                    enemigo.GetComponent<AI>().enabled = false;
+                    enemigo.GetComponent<Collider2D>().enabled = false;
+                    enemigo.transform.GetChild(0).GetComponent<Collider2D>().enabled = false;
                     break;
             }
             animator.SetBool("Appeased", true);

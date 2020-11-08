@@ -19,7 +19,7 @@ public class AIGhastya : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        /*if (Input.GetKeyDown(KeyCode.A))
         {
             transform.eulerAngles = Vector3.forward * -1;
             
@@ -27,7 +27,7 @@ public class AIGhastya : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.D))
         {
             transform.eulerAngles = Vector3.forward * 0;
-        }
+        }*/
         if (pos.position.x > target.position.x && isFlipped == false)
         {
             scaleX = pos.localScale.x;

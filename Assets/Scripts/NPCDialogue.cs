@@ -31,6 +31,7 @@ public class NPCDialogue : MonoBehaviour {
 					ghastya.transform.position = this.gameObject.transform.position;
 					ghastya.SetActive(true);
 					player.GetComponent<PlayerMovement>().ghastyaUnlocked = true;
+					player.GetComponent<PlayerMovement>().healIndicator.SetActive(true);
 					GetComponent<Collider2D>().enabled = false;
 					GetComponent<SpriteRenderer>().enabled = false;
 					player.GetComponent<PlayerMovement>().enabled = true;
