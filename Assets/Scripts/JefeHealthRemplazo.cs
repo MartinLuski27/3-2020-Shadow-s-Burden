@@ -15,6 +15,7 @@ public class JefeHealthRemplazo : MonoBehaviour {
 	public int maxHealth = 15;
     int currentHealth;
     public Animator animator;
+    public GameObject levelLoader;
     
     void Start()
     {
@@ -40,5 +41,12 @@ public class JefeHealthRemplazo : MonoBehaviour {
     {
         animator.SetTrigger("Muerto");
 		GetComponent<Collider2D>().enabled = false;
+        StartCoroutine(delayFinal());
+    }
+
+    IEnumerator delayFinal()
+    {
+        yield return new WaitForSeconds(2f);
+        levelLoader.GetComponent<LevelLoader>().LoadNextLevel();
     }
 }

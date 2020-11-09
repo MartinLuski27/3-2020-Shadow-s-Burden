@@ -53,8 +53,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DetectionZone.cs" />
      <Compile Include="Assets\Free Asset - 2D Handcrafted Art\Scriptshandcraft\CamerController.cs" />
+     <Compile Include="Assets\RestartGame.cs" />
      <Compile Include="Assets\Scripts\AI.cs" />
      <Compile Include="Assets\Scripts\AIGhastya.cs" />
      <Compile Include="Assets\Scripts\Apaciguar.cs" />
@@ -65,12 +65,14 @@
      <Compile Include="Assets\Scripts\BossWeapon.cs" />
      <Compile Include="Assets\Scripts\CactusDamage.cs" />
      <Compile Include="Assets\Scripts\CharacterController2D.cs" />
+     <Compile Include="Assets\Scripts\DetectionZone.cs" />
      <Compile Include="Assets\Scripts\DontDestroy.cs" />
      <Compile Include="Assets\Scripts\DoubleJump.cs" />
      <Compile Include="Assets\Scripts\enemy.cs" />
      <Compile Include="Assets\Scripts\enemyCollide.cs" />
      <Compile Include="Assets\Scripts\EnemyGFX.cs" />
      <Compile Include="Assets\Scripts\EnemyHealth.cs" />
+     <Compile Include="Assets\Scripts\FinalMessage.cs" />
      <Compile Include="Assets\Scripts\gemUI.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />

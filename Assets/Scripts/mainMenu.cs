@@ -30,4 +30,10 @@ public class mainMenu : MonoBehaviour {
         Application.Quit();
         UIsound.Play();
     }
+
+    public void Reset()
+    {
+        Debug.Log("reset");
+        SceneManager.LoadScene(1);
+    }
 }
