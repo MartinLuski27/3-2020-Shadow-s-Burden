@@ -15,7 +15,7 @@ public class PauseMenu : MonoBehaviour {
 	// Update is called once per frame
     //Función que detecta si el juego está pausado, entonces al apretar "escape", dependiendo de si lo está o no, pausa o continua el juego.
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
             if (GameIsPaused)
             {

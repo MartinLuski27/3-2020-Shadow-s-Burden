@@ -12,6 +12,8 @@ public class FinalMessage : MonoBehaviour
 	public string mensajeNeutro;
 	public string mensajeMalo;
 
+    public AudioSource UIsound3;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -30,13 +32,14 @@ public class FinalMessage : MonoBehaviour
         {
 			gameObject.GetComponent<Text>().text = mensajeNeutro;
 		}
-
-		StartCoroutine(Reset());
 	}
 
-	IEnumerator Reset()
+	void Update()
     {
-		yield return new WaitForSeconds(15f);
-		SceneManager.LoadScene(1);
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(1);
+            UIsound3.Play();
+        }
     }
 }
