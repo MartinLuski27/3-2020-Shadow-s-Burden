@@ -10,10 +10,19 @@ public class mainMenu : MonoBehaviour {
 
     public AudioSource UIsound;
 
+    public GameObject gameManager;
+
+    private void Start()
+    {
+        gameManager = GameObject.Find("GameManager");
+    }
+
     //Función que se aplica al slider, que toma su valor y lo relaciona con el del volumen del mixer de audio principal, para reducir o aumentar el volumen.
     public void setVolumen (float volumen)
     {
+        gameManager = GameObject.Find("GameManager");
         audioMixer.SetFloat("volumen", volumen * 10);
+        gameManager.GetComponent<DontDestroy>().volumenValorSlider = volumen;
     }
 
     //Función que toma el número de la escena actual (menú) y carga la siguiente (pirámide) en estado de juego.

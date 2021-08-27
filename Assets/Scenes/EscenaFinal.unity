@@ -583,12 +583,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21fb9e9e2b47e2440a133be60bb422ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mensajeBueno: "Queda un largo camino por recorrer, pero la bondad siempre estuvo,
-    est\xE1 y estar\xE1 de tu lado, y con ella, los problemas cesaran."
-  mensajeNeutro: "Hasta ahora has hecho un camino de balance perfecto, pero tarde
-    o temprano, deber\xE1s inclinarte hacia un lado, para sobrevivir."
-  mensajeMalo: "Arrasaste con todo lo que te encontraste a tu paso, invocando la furia
-    de antiguos esp\xEDritus que hab\xEDan estado dormidos durante generaciones..."
+  mensajeBueno: "Detr\xE1s de ti reina el silencio, interrumpido solo por los placidos
+    murmullos de gratitud, de aquellos que no deberian ser. Existes tan solo en el
+    recuerdo de un fantasma, por siempre y para siempre."
+  mensajeNeutro: "Detr\xE1s de ti reina el silencio, y te seguira all\xE1 a donde
+    vayas, llamando a un nombre que no existe. Nunca ser\xE1s marcado por el sol o
+    por la luna, y no eres mas que otro fantasma perdido en el recuerdo."
+  mensajeMalo: "Detr\xE1s de ti reina el silencio, interrumpido solo por el latir
+    de un coraz\xF3n que no existe. Solo en el calor de la llama que todo lo consume
+    eres capaz de reflejarte. Procura que no te consuma a ti."
   UIsound3: {fileID: 248709843}
 --- !u!114 &1466338958
 MonoBehaviour:

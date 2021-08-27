@@ -2868,6 +2868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 7042061615148cf4f853ce4457468d93, type: 2}
   UIsound: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &896590178
 GameObject:
   m_ObjectHideFlags: 0
@@ -3444,7 +3445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &940994974
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3621,7 +3622,7 @@ SpriteRenderer:
   m_Size: {x: 0.15, y: 0.13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &960237087
@@ -5376,11 +5377,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -5432,9 +5433,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueBox: {fileID: 121901767}
   DialogueText: {fileID: 1752924783}
-  Dialogue: "Hola, yo soy Ghastya. A partir de este momento, estoy jurada a ti y te
-    ayudar\xE9 al m\xE1ximo de mis capacidades. Con mis poderes, puedes curarte oprimiendo
-    A. Ahora vamos, salgamos de esta piramide. (Oprime \u2191 para continuar)"
+  Dialogue: "Ha olvidado el tiempo cuanto he esperado verte una vez m\xE1s. Yo soy
+    Ghastya, y a partir de este momento, estoy jurada a tu servicio. Con mis poderes,
+    puedes curarte oprimiendo A. Ahora vamos, salgamos de esta piramide, repleta de
+    fantasmas. (Oprime \u2191 para continuar)"
   DialogueActive: 0
   ghastya: {fileID: 1137105375}
   player: {fileID: 1408264417}
@@ -5689,7 +5691,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -1.61, y: 0}
   m_SizeDelta: {x: 6.77, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5758,7 +5760,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -6.48, y: 0}
   m_SizeDelta: {x: 7.03, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

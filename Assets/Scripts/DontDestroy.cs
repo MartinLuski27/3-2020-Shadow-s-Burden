@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Runtime.Remoting.Messaging;
 
 public class DontDestroy : MonoBehaviour {
@@ -13,6 +14,8 @@ public class DontDestroy : MonoBehaviour {
 	public bool specialSpawnPoint = false;
 	GameObject player;
 	public GameObject ghastya;
+    public Slider sliderVol;
+    public float volumenValorSlider = 0;
 
 	public List<string> noRespawnEnemies = new List<string>(); //list de los nombres de los enemigos
 
@@ -32,7 +35,14 @@ public class DontDestroy : MonoBehaviour {
 			ResetValues();
         }
 
-		foreach (string enemyName in noRespawnEnemies)
+        if (SceneManager.GetActiveScene().buildIndex != 5)
+        {
+            sliderVol = GameObject.Find("Slider").GetComponent<Slider>();
+            GameObject.Find("OpcionesMenu").SetActive(false);
+            sliderVol.value = volumenValorSlider;
+        }
+
+        foreach (string enemyName in noRespawnEnemies)
         {
 			noRespawnEnemy = GameObject.Find(enemyName); //usar los nombres de la lista para encontrar a los enemigos, uno por uno
 			if (noRespawnEnemy != null)
