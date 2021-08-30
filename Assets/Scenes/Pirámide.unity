@@ -3966,8 +3966,8 @@ EdgeCollider2D:
   - {x: -1.2759668, y: -1.4452307}
   - {x: 1.2905489, y: -1.4450926}
   - {x: 1.2911366, y: -1.1179142}
-  - {x: 1.5964367, y: -1.1190538}
-  - {x: 1.5966606, y: 0.80009615}
+  - {x: 1.5857655, y: -1.1166849}
+  - {x: 1.585765, y: 0.797159}
   - {x: 2.2392936, y: 0.80067253}
   - {x: 2.2436726, y: -1.4445533}
   - {x: 3.5413544, y: -1.4463131}
@@ -6242,6 +6242,10 @@ Prefab:
         type: 2}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437964049585484, guid: 1891abd4839a6624887fe8c28a325c07, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1891abd4839a6624887fe8c28a325c07, type: 2}
